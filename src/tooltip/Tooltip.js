@@ -21,6 +21,12 @@ class Tooltip extends React.PureComponent {
 
   renderedElement;
 
+  hide = () => {
+    if (this.state.isVisible) {
+      this.toggleTooltip();
+    }
+  };
+
   toggleTooltip = () => {
     const { onClose } = this.props;
     this.getElementPosition();
